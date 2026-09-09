@@ -3,6 +3,7 @@ FROM ghcr.io/cirruslabs/flutter:stable AS build
 WORKDIR /app
 COPY . .
 
+RUN flutter create . --platforms web --org com.touristsafety --project-name tourist_safety
 RUN flutter pub get
 RUN flutter gen-l10n
 RUN flutter build web \

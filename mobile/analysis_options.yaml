@@ -11,3 +11,4 @@ analyzer:
   exclude:
     - '**/*.g.dart'
     - 'lib/l10n/**'
+    - build/**

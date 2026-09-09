@@ -14,3 +14,7 @@ dist/
 build/
 *.egg-info/
 run.txt
+ESC-50/
+.kaggle/
+dataset/
+dataset.zip
