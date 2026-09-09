@@ -1,0 +1,91 @@
+{
+  "@@locale": "es",
+
+  "appName": "Seguridad Turística",
+
+  "onboardingTitle1": "Detecta angustia automáticamente",
+  "onboardingBody1": "Incluso cuando no puedes pedir ayuda, la IA en tu dispositivo detecta señales de peligro.",
+  "onboardingTitle2": "Funciona sin internet",
+  "onboardingBody2": "SMS y retransmisión entre dispositivos cercanos mantienen tu alerta activa sin señal.",
+  "onboardingTitle3": "Tu identidad permanece protegida",
+  "onboardingBody3": "Tus datos personales y médicos solo se desbloquean para un responsable verificado durante una emergencia real.",
+  "onboardingSkip": "Omitir",
+  "onboardingNext": "Siguiente",
+  "onboardingGetStarted": "Comenzar",
+
+  "loginTitle": "Bienvenido de Nuevo",
+  "loginEmail": "Correo Electrónico",
+  "loginPassword": "Contraseña",
+  "loginButton": "Iniciar Sesión",
+  "loginForgotPassword": "¿Olvidaste tu contraseña?",
+  "loginNoAccount": "¿No tienes una cuenta?",
+  "loginSignUp": "Regístrate",
+
+  "signupTitle": "Crear Cuenta",
+  "signupName": "Nombre Completo",
+  "signupPhone": "Número de Teléfono",
+  "signupButton": "Crear Cuenta",
+  "signupHaveAccount": "¿Ya tienes una cuenta?",
+
+  "forgotPasswordTitle": "Restablecer Contraseña",
+  "forgotPasswordBody": "Ingresa tu correo y te enviaremos un código por SMS.",
+  "forgotPasswordButton": "Enviar Código",
+
+  "resetPasswordTitle": "Ingresa Nueva Contraseña",
+  "resetPasswordCode": "Código de Restablecimiento",
+  "resetPasswordNew": "Nueva Contraseña",
+  "resetPasswordButton": "Restablecer Contraseña",
+
+  "emergencyContactsSetupTitle": "Contactos de Emergencia",
+  "emergencyContactsSetupBody": "Agrega al menos una persona a quien podamos notificar si necesitas ayuda.",
+  "emergencyContactsAdd": "Agregar Contacto",
+  "emergencyContactsContinue": "Continuar",
+
+  "permissionMicTitle": "Acceso al Micrófono",
+  "permissionMicBody": "Escuchamos sonidos de angustia como gritos completamente en tu dispositivo. El audio nunca se transmite ni se guarda a menos que se active una alerta.",
+  "permissionLocationTitle": "Acceso a Ubicación",
+  "permissionLocationBody": "Necesitamos tu ubicación, incluso en segundo plano, para detectar si dejaste de moverte en una zona de alto riesgo y enviarla con una alerta.",
+  "permissionBluetoothTitle": "Acceso a Dispositivos Cercanos",
+  "permissionBluetoothBody": "Esto permite que tu teléfono retransmita una alerta a través de dispositivos cercanos cuando no tengas señal.",
+  "permissionBatteryTitle": "Mantener el Monitoreo Activo",
+  "permissionBatteryBody": "Desactiva la optimización de batería para esta app para que la detección siga funcionando en segundo plano.",
+  "permissionAllow": "Permitir",
+  "permissionNotNow": "Ahora No",
+
+  "homeMonitoringActive": "Monitoreo activo",
+  "homeMonitoringInactive": "Monitoreo pausado",
+  "homeNearbyDevices": "{count} dispositivos cercanos disponibles como respaldo",
+  "homeTestAlert": "Probar Alerta de Prueba",
+
+  "sosCancelPrompt": "Cancelar antes de enviar",
+  "sosSentInternet": "Alerta enviada por Internet",
+  "sosSentSms": "Alerta enviada por SMS",
+  "sosSentMesh": "Retransmitiendo por dispositivos cercanos",
+  "sosImSafe": "Estoy a Salvo — Cancelar",
+  "sosEvidenceAttached": "Evidencia adjunta",
+  "sosHistoryTitle": "Historial de Alertas",
+  "sosHistoryEmpty": "No hay alertas anteriores.",
+
+  "mapTitle": "Mapa de Riesgo",
+  "mapRiskLow": "Riesgo Bajo",
+  "mapRiskMedium": "Riesgo Moderado",
+  "mapRiskHigh": "Riesgo Alto",
+
+  "profileTitle": "Perfil",
+  "profileEmergencyContacts": "Contactos de Emergencia",
+  "profileMedicalInfo": "Información Médica",
+  "profileIdentityLocked": "Identidad: Protegida",
+  "profileIdentityUnlocked": "Identidad: Desbloqueada",
+
+  "settingsTitle": "Configuración",
+  "settingsSensitivity": "Sensibilidad de Detección",
+  "settingsNotifications": "Notificaciones",
+  "settingsPermissions": "Permisos",
+  "settingsOfflineData": "Datos sin Conexión",
+  "settingsPrivacy": "Privacidad y Datos",
+  "settingsLanguage": "Idioma",
+  "settingsAbout": "Acerca de",
+  "settingsLogout": "Cerrar Sesión",
+
+  "offlineBanner": "Sin internet — Respaldo por SMS y red cercana activo"
+}

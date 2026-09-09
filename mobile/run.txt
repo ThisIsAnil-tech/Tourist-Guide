@@ -1,0 +1,119 @@
+TOURIST SAFETY MOBILE APP - LOCAL SETUP GUIDE
+=================================================
+
+PREREQUISITES
+--------------
+- Flutter SDK 3.3+ (stable channel)
+- Xcode (for iOS builds, Mac only)
+- Android Studio or command-line Android SDK tools
+- The backend must already be running (see backend/run.txt)
+- A physical device is strongly recommended for testing —
+  microphone, GPS, and Bluetooth features do not behave
+  realistically on most simulators/emulators
+
+
+SETUP
+------
+
+1. Install dependencies:
+   flutter pub get
+
+2. Generate localization files (required before first run):
+   flutter gen-l10n
+
+3. Place your trained model file at:
+   assets/models/distress_audio_model.tflite
+   (the app will not compile without this file present,
+   even as a placeholder, since it is declared in pubspec.yaml)
+
+4. Add your Google Maps API key:
+   - Android: android/app/src/main/AndroidManifest.xml
+     inside the <application> tag:
+     <meta-data android:name="com.google.android.geo.API_KEY"
+                android:value="YOUR_KEY_HERE"/>
+   - iOS: ios/Runner/AppDelegate.swift
+     add before return super.application(...):
+     GMSServices.provideAPIKey("YOUR_KEY_HERE")
+
+5. Run with your backend URL and mesh gateway key passed in
+   at build time (Flutter does not read .env files directly):
+
+   flutter run \
+     --dart-define=API_BASE_URL=http://localhost:8000 \
+     --dart-define=MESH_GATEWAY_API_KEY=change_this_mesh_gateway_key \
+     --dart-define=ENVIRONMENT=development
+
+   Tip: create a shell script (e.g. run_dev.sh) wrapping this
+   command so you don't retype it every time.
+
+
+ANDROID PERMISSIONS SETUP
+-----------------------------
+Add the following to android/app/src/main/AndroidManifest.xml,
+inside the <manifest> tag, above <application>:
+
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+  <uses-permission android:name="android.permission.SEND_SMS"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+
+IOS PERMISSIONS SETUP
+-------------------------
+Add the following keys to ios/Runner/Info.plist, inside the
+outermost <dict>:
+
+  <key>NSMicrophoneUsageDescription</key>
+  <string>We listen for distress sounds entirely on your device to detect emergencies.</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>We need your location to detect danger zones and send it with an alert.</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>Background location lets us detect if you have stopped moving in a risky area.</string>
+  <key>NSBluetoothAlwaysUsageDescription</key>
+  <string>Nearby device access lets your alert relay through other phones when you have no signal.</string>
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>audio</string>
+    <string>location</string>
+    <string>bluetooth-central</string>
+    <string>bluetooth-peripheral</string>
+    <string>fetch</string>
+  </array>
+
+
+RUNNING TESTS
+--------------
+flutter test
+
+
+BUILDING FOR RELEASE
+------------------------
+Android:
+   flutter build apk --release \
+     --dart-define=API_BASE_URL=https://your-production-api.com \
+     --dart-define=MESH_GATEWAY_API_KEY=your_real_key \
+     --dart-define=ENVIRONMENT=production
+
+iOS:
+   flutter build ios --release \
+     --dart-define=API_BASE_URL=https://your-production-api.com \
+     --dart-define=MESH_GATEWAY_API_KEY=your_real_key \
+     --dart-define=ENVIRONMENT=production
+
+
+KNOWN INCOMPLETE PIECES (see prior notes)
+---------------------------------------------
+- services/audio_classification_service.dart: audio buffer capture
+  and Mel-spectrogram computation are stubbed pending your trained
+  model's exact input tensor shape.
+- services/mesh_service.dart: multi-hop relay chaining is a basic
+  single-hop implementation; full store-and-forward across many
+  devices needs additional state tracking before field testing.

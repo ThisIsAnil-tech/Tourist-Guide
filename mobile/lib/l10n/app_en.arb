@@ -1,0 +1,91 @@
+{
+  "@@locale": "en",
+
+  "appName": "Tourist Safety",
+
+  "onboardingTitle1": "Detects distress automatically",
+  "onboardingBody1": "Even when you cannot call for help, on-device AI listens and watches for signs of danger.",
+  "onboardingTitle2": "Works without internet",
+  "onboardingBody2": "SMS and nearby-device relay keep your alert moving even with zero signal.",
+  "onboardingTitle3": "Your identity stays locked",
+  "onboardingBody3": "Personal and medical details are only unlocked for a verified responder during a real emergency.",
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingGetStarted": "Get Started",
+
+  "loginTitle": "Welcome Back",
+  "loginEmail": "Email",
+  "loginPassword": "Password",
+  "loginButton": "Sign In",
+  "loginForgotPassword": "Forgot Password?",
+  "loginNoAccount": "Don't have an account?",
+  "loginSignUp": "Sign Up",
+
+  "signupTitle": "Create Account",
+  "signupName": "Full Name",
+  "signupPhone": "Phone Number",
+  "signupButton": "Create Account",
+  "signupHaveAccount": "Already have an account?",
+
+  "forgotPasswordTitle": "Reset Password",
+  "forgotPasswordBody": "Enter your email and we will send a reset code via SMS.",
+  "forgotPasswordButton": "Send Reset Code",
+
+  "resetPasswordTitle": "Enter New Password",
+  "resetPasswordCode": "Reset Code",
+  "resetPasswordNew": "New Password",
+  "resetPasswordButton": "Reset Password",
+
+  "emergencyContactsSetupTitle": "Emergency Contacts",
+  "emergencyContactsSetupBody": "Add at least one person we can notify if you need help.",
+  "emergencyContactsAdd": "Add Contact",
+  "emergencyContactsContinue": "Continue",
+
+  "permissionMicTitle": "Microphone Access",
+  "permissionMicBody": "We listen for distress sounds like screams entirely on your device. Audio is never streamed or stored unless an alert is triggered.",
+  "permissionLocationTitle": "Location Access",
+  "permissionLocationBody": "We need your location, even in the background, to detect if you have stopped moving in a high-risk area and to send it with an alert.",
+  "permissionBluetoothTitle": "Nearby Device Access",
+  "permissionBluetoothBody": "This lets your phone relay an alert through nearby devices when you have no signal.",
+  "permissionBatteryTitle": "Keep Monitoring Active",
+  "permissionBatteryBody": "Disable battery optimization for this app so detection keeps running in the background.",
+  "permissionAllow": "Allow",
+  "permissionNotNow": "Not Now",
+
+  "homeMonitoringActive": "Monitoring active",
+  "homeMonitoringInactive": "Monitoring paused",
+  "homeNearbyDevices": "{count} nearby devices available as backup relay",
+  "homeTestAlert": "Try a Test Alert",
+
+  "sosCancelPrompt": "Cancel before sending",
+  "sosSentInternet": "Alert sent via Internet",
+  "sosSentSms": "Alert sent via SMS",
+  "sosSentMesh": "Relaying via nearby devices",
+  "sosImSafe": "I'm Safe — Cancel",
+  "sosEvidenceAttached": "Evidence attached",
+  "sosHistoryTitle": "SOS History",
+  "sosHistoryEmpty": "No past alerts.",
+
+  "mapTitle": "Risk Map",
+  "mapRiskLow": "Low Risk",
+  "mapRiskMedium": "Moderate Risk",
+  "mapRiskHigh": "High Risk",
+
+  "profileTitle": "Profile",
+  "profileEmergencyContacts": "Emergency Contacts",
+  "profileMedicalInfo": "Medical Information",
+  "profileIdentityLocked": "Identity: Locked",
+  "profileIdentityUnlocked": "Identity: Unlocked",
+
+  "settingsTitle": "Settings",
+  "settingsSensitivity": "Detection Sensitivity",
+  "settingsNotifications": "Notifications",
+  "settingsPermissions": "Permissions",
+  "settingsOfflineData": "Offline Data",
+  "settingsPrivacy": "Privacy & Data",
+  "settingsLanguage": "Language",
+  "settingsAbout": "About",
+  "settingsLogout": "Log Out",
+
+  "offlineBanner": "No internet — SMS and mesh backup active"
+}
