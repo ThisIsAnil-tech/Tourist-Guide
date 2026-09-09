@@ -1,9 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
 const client = axios.create({
-  baseURL: BASE_URL,
+  baseURL: "https://tourist-guide-api-xgpf.onrender.com",
 });
 
 let accessToken = null;
