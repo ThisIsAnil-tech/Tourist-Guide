@@ -71,6 +71,11 @@ app.include_router(responders.router, prefix="/responders", tags=["responders"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 
+@app.get("/healthz", tags=["health"])
+async def healthz():
+    return {"status": "ok"}
+
+
 @app.on_event("startup")
 async def on_startup():
     start_scheduler()
