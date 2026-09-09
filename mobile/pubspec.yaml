@@ -1,10 +1,9 @@
 name: tourist_safety
-description: Smart Tourist Safety and Incident Response System - Mobile App
-publish_to: 'none'
-version: 1.0.0+1
+description: Tourist Safety mobile application.
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: ^3.13.0
+  flutter: ">=3.32.0"
 
 dependencies:
   flutter:
@@ -30,7 +29,7 @@ dependencies:
   tflite_flutter: ^0.11.0
 
   nearby_connections: ^3.3.0
-  telephony: ^0.2.0
+  another_telephony: ^0.4.1
 
   flutter_local_notifications: ^17.2.3
   flutter_background_service: ^5.0.10

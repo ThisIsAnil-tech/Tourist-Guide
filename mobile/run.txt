@@ -40,7 +40,7 @@ SETUP
 
    flutter run \
      --dart-define=API_BASE_URL=http://localhost:8000 \
-     --dart-define=MESH_GATEWAY_API_KEY=change_this_mesh_gateway_key \
+     --dart-define=MESH_GATEWAY_API_KEY=baeec6362d293cca4690dc52fdc61b30 \
      --dart-define=ENVIRONMENT=development
 
    Tip: create a shell script (e.g. run_dev.sh) wrapping this

@@ -1,5 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:telephony/telephony.dart';
+import 'package:another_telephony/telephony.dart';
 import '../models/sos_event_model.dart';
 import '../core/config/env_config.dart';
 import 'api/sos_api.dart';
@@ -83,7 +83,7 @@ class SosPipelineService {
 
     try {
       await _telephony.sendSms(
-        to: '+919380945683',
+        to: '+10000000000',
         message: 'SOS lat:$lat lon:$lon type:$eventType',
       );
       return true;

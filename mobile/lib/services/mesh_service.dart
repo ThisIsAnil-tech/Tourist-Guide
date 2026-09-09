@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 import 'package:nearby_connections/nearby_connections.dart';
 import '../models/nearby_device_model.dart';
 import '../core/config/env_config.dart';

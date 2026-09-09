@@ -30,3 +30,5 @@ ios/.symlinks/
 **/ios/**/GeneratedPluginRegistrant.*
 
 .DS_Store
+
+run.txt
