@@ -1,0 +1,46 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: tourist_safety_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    container_name: tourist_safety_redis
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    container_name: tourist_safety_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongo
+      - redis
+
+  admin:
+    build: ./admin
+    container_name: tourist_safety_admin
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./admin/.env
+    depends_on:
+      - backend
+
+  mobile-web:
+    build: ./mobile
+    container_name: tourist_safety_mobile_web
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
